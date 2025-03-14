@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, #000, #111, #222, #333);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-png {
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background: linear-gradient(to right, #666666, #eaeaea);
+}
+
+.logo {
+    background: linear-gradient(to right, #666666, #eaeaea);
+    background-clip: text;
+    color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 30px;
+    margin-right: auto;
+}
+
+.logo span {
+    background: linear-gradient(90deg, #02c118, #037610);
+    background-clip: text;
+    color: transparent;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+}
+
+.ativo {
+        background: linear-gradient(to right, #02c118, #037610);
+        background-clip: text;
+        color: transparent;
+}
+
+ul li a:hover {
+    background: linear-gradient(to right, #02c118, #037610);
+    background-clip: text;
+    color: transparent;
+}
+
+.close-btn {
+    display: none;
+    cursor: pointer;
+    color: transparent;
+    font-weight: bold;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        align-items: center;
+    }
+
+    .close-btn {
+        color: red;
+        display: block;
+    }
+
+    .logo {
+        text-align: center;
+        margin: 0px 0;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    ul.active {
+        display: flex;
+    }
+
+    ul li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    .close-btn {
+        color: red;
+        display: block;
+    }
+    
+    .menu-icon {
+        font-size: 30px;
+        display: block;
+        cursor: pointer;
+        content: 'X';
+        font-size: 30px;
+        color: white;
+    }
+
+    .dynamic-container {
+        font-size: 20px;
+    }
+
+    .dynamic-text {
+        font-size: 22px;
+    }
+
+    .blinking-cursor {
+        font-size: 1em;
+    }
+}
+
+.dynamic-container {
+    right: 100px;
+    font-weight: bold;
+    color: white;
+    margin-top: 50px;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.dynamic-text {
+    font-weight: bold;
+    color: #02c118;
+}
+
+.blinking-cursor {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #02c118;
+}
+
+/* Estilo do botão switch toggle */
+.theme-switch {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 50px;
+    height: 25px;
+    display: inline-block;
+    z-index: 100;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #000;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #02c118; 
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); 
+}
+
+body.light-mode {
+    background: linear-gradient(to left, #6e6e6e, #ffffff8a);
+    color: black;
+}
+
+header.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.nativo.light-mode {
+    background: linear-gradient(to right, #111, #555);
+    background-clip: text;
+    color: transparent;
+}
+
+.nativo1.light-mode {
+    background: linear-gradient(to right, #111, #555);
+    background-clip: text;
+    color: transparent;
+}
+
+.nativo2.light-mode {
+    background: linear-gradient(to right, #111, #555);
+    background-clip: text;
+    color: transparent;
+}
+
+.nativo:hover.light-mode {
+    background: linear-gradient(to right, #02c118, #037610);
+    background-clip: text;
+    color: transparent;
+}
+
+.nativo1:hover.light-mode {
+    background: linear-gradient(to right, #02c118, #037610);
+    background-clip: text;
+    color: transparent;
+}
+
+.nativo2:hover.light-mode {
+    background: linear-gradient(to right, #02c118, #037610);
+    background-clip: text;
+    color: transparent;
+}
+
+.logo-png.light-mode {
+    border-color: black;
+    background: linear-gradient(to left, #eaeaea, #666666);
+}
+
+.logo.light-mode {
+    background: linear-gradient(to right, #111, #fff);
+    background-clip: text;
+    color: transparent;
+}
+
+.logo span.light-mode {
+    background: linear-gradient(90deg, #037610, #02c118);
+    background-clip: text;
+}
+
+.dynamic-container.light-mode {
+    color: #555;
+}

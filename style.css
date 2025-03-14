@@ -1,0 +1,121 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container principal */
+.login-container {
+    background: #111;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+/* Título e descrição */
+.login-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.login-container p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Estilo dos inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #222;
+    color: white;
+}
+
+/* Foco no campo de input */
+input:focus {
+    outline: none;
+    border-color: #6c63ff;
+    background-color: #333;
+}
+
+.Senha {
+    position: relative;
+}
+
+i {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    transform: translateY(-25%);
+    font-size: 25px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+/* Estilo do botão */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #5751d9;
+}
+
+/* Estilo para o link de alternância */
+#toggle-link span {
+    color: #007bff;  /* Cor azul do link */
+    text-decoration: none;  /* Remover o sublinhado */
+}
+
+/* Estilo quando o link for clicado ou estiver em foco */
+#toggle-link span:active,
+#toggle-link span:focus {
+    color: #0056b3;  /* Cor azul mais escura quando clicado ou em foco */
+}
+
+/* Estilo quando o cursor passar por cima do link */
+#toggle-link span:hover {
+    color: #0056b3;  /* Cor azul mais escura no hover */
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 24px;
+    }
+
+    .login-container p {
+        font-size: 12px;
+    }
+}

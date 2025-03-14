@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="./img/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>ducal2022</title>
+</head>
+<body>
+
+<label class="theme-switch">
+<input type="checkbox" id="theme-toggle">
+    <span class="slider"></span>
+</label>
+
+<header>
+    <img src="./img/logo.png" class="logo-png">
+    <h1 class="logo">ducal<span>2022</span></h1>
+    <div class="menu-icon" onclick="toggleMenu()">
+        &#9776;
+    </div>
+    <ul id="menu">
+        <li><a href="index.html" class="ativo">Inicio</a></li>
+        <li><a href="#" class="nativo">Contato</a></li>
+        <li><a href="#" class="nativo1">Serviço</a></li>
+        <li><a href="#" class="nativo2">Outro</a></li>
+        <li><span class="close-btn" onclick="closeMenu()">X</span></li>
+    </ul>
+</header>
+
+<div class="dynamic-container">
+    <p>Eu sou um <span class="dynamic-text"></span><span class="blinking-cursor">|</span></p>
+</div>
+
+<script src="script.js"></script>
+<script src="oneko.js"></script>
+
+</body>
+</html>
